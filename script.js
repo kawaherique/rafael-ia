@@ -1,4 +1,3 @@
-const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
@@ -6,72 +5,84 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
+        enunciado: "Você decide começar uma pequena horta em casa para cultivar seus próprios alimentos. Qual é o primeiro passo que você toma?",
         alternativas: [
             {
-                texto: "Isso é assustador!",
-                afirmacao: "No início ficou com medo do que essa tecnologia pode fazer. "
+                texto: "Pesquisar sobre o tipo de solo e clima mais adequado para a horta.",
+                afirmacao: "Você entendeu a importância do ambiente certo para uma horta saudável."
             },
             {
-                texto: "Isso é maravilhoso!",
-                afirmacao: "Quis saber como usar IA no seu dia a dia."
+                texto: "Comprar sementes e ferramentas sem muita pesquisa.",
+                afirmacao: "Você descobriu que investir tempo na pesquisa é crucial para o sucesso da horta."
             }
         ]
     },
     {
-        enunciado: "Com a descoberta desta tecnologia, chamada Inteligência Artificial, uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre esta tecnologia. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de IA em sala de aula. Qual atitude você toma?",
+        enunciado: "Durante o crescimento da sua horta, você encontra algumas pragas. Qual é a sua abordagem para resolver o problema?",
         alternativas: [
             {
-                texto: "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
-                afirmacao: "Conseguiu utilizar a IA para buscar informações úteis."
+                texto: "Utilizar métodos naturais e orgânicos para controlar as pragas.",
+                afirmacao: "Você aprendeu que práticas sustentáveis ajudam a manter um ambiente saudável para suas plantas."
             },
             {
-                texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
-                afirmacao: "Sentiu mais facilidade em utilizar seus próprios recursos para escrever seu trabalho."
+                texto: "Recorrer a pesticidas químicos para resolver o problema rapidamente.",
+                afirmacao: "Você percebeu que o uso de químicos pode ter impactos negativos no longo prazo e decidiu pesquisar alternativas."
             }
         ]
     },
     {
-        enunciado: "Após a elaboração do trabalho escrito, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
+        enunciado: "Sua horta começa a produzir mais do que você consegue consumir. O que você faz com a produção excedente?",
         alternativas: [
             {
-                texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
-                afirmacao: "Vem impulsionando a inovação na área de IA e luta para abrir novos caminhos profissionais com IA."
+                texto: "Compartilhar com vizinhos e amigos ou doar para instituições de caridade.",
+                afirmacao: "Você encontrou maneiras de contribuir para a comunidade e evitar o desperdício."
             },
             {
-                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
-                afirmacao: "Sua preocupação com as pessoas motivou a criar um grupo de estudos entre trabalhadores para discutir meios de utilização de IA de forma ética."
+                texto: "Deixar a produção excedente apodrecer.",
+                afirmacao: "Você viu a importância de encontrar soluções para o excedente para evitar desperdício e contribuir para o bem-estar comum."
             }
         ]
     },
     {
-        enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
+        enunciado: "Você está pensando em expandir sua horta para incluir mais variedades de vegetais e frutas. Qual é a sua estratégia para essa expansão?",
         alternativas: [
             {
-                texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
-                afirmacao: "Notou também que muitas pessoas não sabem ainda utilizar as ferramentas tradicionais e decidiu compartilhar seus conhecimentos de design utilizando ferramentas de pintura digital para iniciantes."
+                texto: "Planejar um novo espaço para a horta e pesquisar sobre as melhores práticas para cada tipo de planta.",
+                afirmacao: "Você aprendeu a importância do planejamento e da pesquisa para uma expansão bem-sucedida."
             },
             {
-                texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
-                afirmacao: "Acelerou o processo de criação de trabalhos utilizando geradores de imagem e agora consegue ensinar pessoas que sentem dificuldades em desenhar manualmente como utilizar também!"
+                texto: "Expandir a horta sem um planejamento detalhado e adicionar novas plantas conforme surgem.",
+                afirmacao: "Você descobriu que a falta de planejamento pode levar a problemas e que uma abordagem estruturada é mais eficaz."
             }
         ]
     },
     {
-        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda da IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz? ",
+        enunciado: "Ao cultivar sua horta, você considera incorporar técnicas de cultivo sustentável. O que você faz?",
         alternativas: [
             {
-                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-                afirmacao: "Infelizmente passou a utilizar a IA para fazer todas suas tarefas e agora se sente dependente da IA para tudo."
+                texto: "Adotar técnicas como compostagem e cultivo em sistemas de permacultura.",
+                afirmacao: "Você aprendeu que práticas sustentáveis podem melhorar a qualidade do solo e a saúde das plantas."
             },
             {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-                afirmacao: "Percebeu que toda IA reproduz orientações baseadas na empresa que programou e muito do que o chat escrevia não refletia o que pensava e por isso sabe que os textos gerados pela IA devem servir como auxílio e não resultado final. "
+                texto: "Continuar com técnicas tradicionais sem mudanças.",
+                afirmacao: "Você percebeu que novas técnicas podem trazer benefícios e decidiu explorar a sustentabilidade."
+            }
+        ]
+    },
+    {
+        enunciado: "Você está pensando em ensinar outras pessoas sobre o cultivo de hortas em casa. Qual é o seu plano?",
+        alternativas: [
+            {
+                texto: "Criar um guia ou workshop sobre os fundamentos do cultivo de hortas e compartilhar suas experiências.",
+                afirmacao: "Você se tornou um recurso valioso para a comunidade e ajudou outras pessoas a iniciar suas próprias hortas."
+            },
+            {
+                texto: "Compartilhar apenas suas experiências de forma informal com amigos e familiares.",
+                afirmacao: "Você viu que formalizar o ensino pode impactar mais pessoas e decidiu criar um recurso mais estruturado."
             }
         ]
     },
 ];
-
 
 let atual = 0;
 let perguntaAtual;
@@ -88,8 +99,8 @@ function mostraPergunta() {
     mostraAlternativas();
 }
 
-function mostraAlternativas(){
-    for(const alternativa of perguntaAtual.alternativas) {
+function mostraAlternativas() {
+    for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
         botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
@@ -105,7 +116,7 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
+    caixaPerguntas.textContent = "O Futuro da Agricultura Familiar...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }

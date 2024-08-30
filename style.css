@@ -1,10 +1,9 @@
-:root{
-    --cor-fundo: #01080E ;
-    --cor-principal: #0B0D20 ;
-    --cor-secundaria: #212333; 
-    --cor-destaque: #2BDEFD;
-    --cor-texto: #D7F9FF;
-
+:root {
+    --cor-fundo: #F0F8E4; /* Cor de fundo clara e natural */
+    --cor-principal: #A3D5A1; /* Verde suave, remetendo à natureza */
+    --cor-secundaria: #9BCC9A; /* Verde mais escuro */
+    --cor-destaque: #7D8C3C; /* Verde escuro para destaques */
+    --cor-texto: #3D3D3D; /* Texto em um tom escuro para contraste */
 }
 
 body {
@@ -14,17 +13,19 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    font-family: Arial, sans-serif;
 }
 
-.caixa-principal{
+.caixa-principal {
     background-color: var(--cor-principal);
     width: 90%;
     max-width: 600px;
     text-align: center;
     padding: 20px;
+    border-radius: 10px;
 }
 
-h1{
+h1 {
     color: var(--cor-destaque);
 }
 
@@ -32,12 +33,14 @@ button {
     background-color: var(--cor-secundaria);
     color: var(--cor-texto);
     border: none;
-    border-radius: 15px;
-    padding: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-button:hover{
+button:hover {
     background-color: var(--cor-destaque);
     color: var(--cor-principal);
 }
